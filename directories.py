@@ -24,7 +24,7 @@ i = avil_ext[select]
 print(i)
 #for i in set(extension_list):
 
-folder_name = i
+folder_name = input("Please enter the name of the folder")
 print('folder_name = ',folder_name)
 path = dir_path+'/'+folder_name
 if(os.path.exists(path) is False):
@@ -36,7 +36,7 @@ for f in files:
     print(ext,'i =',i)
     if(ext==i):
         old_path = dir_path+'/'+f
-        new_path = dir_path+'/'+ext+'/'+f
+        new_path = dir_path+'/'+folder_name+'/'+f
         os.rename(old_path,new_path)
         print('Moving to the new Path ->',new_path)
 
